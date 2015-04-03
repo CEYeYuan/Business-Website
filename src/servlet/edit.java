@@ -21,7 +21,7 @@ public class edit extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		PrintWriter out = resp.getWriter();
 		String orderid=req.getParameter("orderid");
-		String name = req.getParameter("name");
+		String name = req.getParameter("ordername");
 		String phone = req.getParameter("phone");
 		String mail = req.getParameter("mail");
 		String email = req.getParameter("email");
@@ -54,11 +54,21 @@ public class edit extends HttpServlet{
 		for(Entity u1:pq.asIterable()){
 			
 			//u1.setProperty("orderid", orderid);
-			u1.setUnindexedProperty("address", address);
-			u1.setUnindexedProperty("email", email);
-			u1.setUnindexedProperty("name", name);
-			u1.setUnindexedProperty("phone", phone);
-			u1.setUnindexedProperty("status", status);
+			String user= u1.getProperty("user").toString();
+			
+			Entity e1=new Entity("order");
+			e1.setProperty("orderid", orderid);
+			e1.setUnindexedProperty("address", address);
+			e1.setProperty("name", name);
+			e1.setUnindexedProperty("email", email);
+			e1.setUnindexedProperty("phone", phone);
+			e1.setUnindexedProperty("status", status);
+			e1.setProperty("user", user);
+			e1.setProperty("mail", mail);
+			ds.put(e1);
+			
+			Key id = u1.getKey();
+			ds.delete(id);
 			
 		}
 		
