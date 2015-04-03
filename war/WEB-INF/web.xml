@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+   <context-param>
+   		<param-name>support</param-name>
+   		<param-value>ddlovingmoon@gmail.com</param-value>
+   </context-param>
+   
+   <context-param>
+   		<param-name>manager</param-name>
+   		<param-value>yzx921031@gmail.com</param-value>
+   </context-param>
+   
+   <servlet>
+      <servlet-name>cart</servlet-name>
+      <servlet-class>servlet.cart</servlet-class>
+   </servlet> 
+   <servlet-mapping>
+      <servlet-name>cart</servlet-name>
+      <url-pattern>/cart</url-pattern>
+   </servlet-mapping>
+   
+	<servlet>
+      <servlet-name>order</servlet-name>
+      <servlet-class>servlet.order</servlet-class>
+   </servlet> 
+   <servlet-mapping>
+      <servlet-name>order</servlet-name>
+      <url-pattern>/order</url-pattern>
+   </servlet-mapping>
+   
+	<welcome-file-list>
+		<welcome-file>homepage.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

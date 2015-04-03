@@ -1,0 +1,29 @@
+.total_div{
+	width:240px;
+	text-align:left;
+	float:left;
+	margin-left:70.5px;
+	margin-bottom:30px;
+	margin-top:20px;
+}
+
+.total_div_first{
+	width:240px;
+	text-align:left;
+	float:left;
+	margin-left:70.5px;
+	margin-bottom:30px;
+	margin-top:20px;
+	clear:left;
+}
+
+img.240{
+	text-align:center;
+	width:240px;
+	height:240px;
+}
+
+.text_div{
+	text-align:left;
+	line-height:20px
+}

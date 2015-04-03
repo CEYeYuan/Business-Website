@@ -1,0 +1,112 @@
+body{
+	background-color: rgb(229,229,229);
+} 
+.divcss5{
+	margin:0 auto;
+	width:1002px;
+}
+
+.content1{
+	background-color: rgb(255,255,255);
+	text-align:left;
+	overflow:hidden;
+} 
+
+.content2{
+	background-color:rgb(34,55,99);
+	color:rgb(255,255,255);
+	text-align:center;
+} 
+
+.content3{
+	text-align:center;
+	margin:0 auto;
+	width:900px;
+	background-color: rgb(255,255,99);
+	overflow:hidden;
+}
+
+.content4{
+	margin:0 auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	width:900px;
+	overflow:hidden;
+}
+
+.text_left{
+	width:490px;
+	float:left;
+	clear:left
+}
+
+.text_left1{
+	text-align:auto;
+}
+
+.text_right{
+	width:490px;
+	float:right;
+	margin-right:0.5cm;
+	clear:right
+}
+
+.email_length{
+	width:400px;
+	margin-right:0.5cm;
+	margin-left:0.5cm;
+}
+
+h5.bigger{
+	line-height:30px;
+	margin-left:0.5cm;
+	margin-right:0.5cm;
+	text-indent:25px 
+}
+
+.container-self, .container-self *{margin:0; padding:0;}
+
+.container-self{width:1002px; height:490px; overflow:hidden;position:relative;}
+
+.slider-self{position:absolute;}
+.slider-self li{ list-style:none;display:inline;}
+.slider-self img{ width:1002px; height:490px; display:block;}
+
+.slider2-self{width:50000px;}
+.slider2-self li{float:left;}
+
+.num-self{ position:absolute; right:5px; bottom:5px;}
+
+.num-self li{
+	float: left;
+	color: rgb(58,121,175);
+	text-align: center;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-family: Arial;
+	font-size: 12px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 3px 1px;
+	border: 1px solid rgb(58,121,175);
+	background-color: #fff;
+}
+
+.num-self li.on{
+	color: #fff;
+	line-height: 21px;
+	width: 21px;
+	height: 21px;
+	font-size: 16px;
+	margin: 0 1px;
+	border: 0;
+	background-color: rgb(58,121,175);
+	font-weight: bold;
+}
+
+.order_info{
+	float:left;
+	margin-left:175px;
+	font-size:120%;
+}

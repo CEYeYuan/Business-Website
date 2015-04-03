@@ -1,0 +1,60 @@
+.checkout_head{
+	background-color:rgb(214,229,232);
+	border-style:solid;
+	border-color:rgb(151,188,197);
+	border-width:1px;
+	overflow:hidden;
+}
+
+.checkout_headcontent{
+	margin-left:12px;
+	margin-right:12px;
+}
+
+.checkout_img{
+	width:60px;
+	height:60px;
+	background-color:#FFF;
+	border-style:solid;
+	border-color:rgb(151,188,197);
+	border-width:1px;
+	text-align:center;
+	display: table-cell;
+	vertical-align:middle;
+	margin-bottom:10px;
+	float:left;
+}
+
+.first{
+	clear:left;
+}
+
+.checkout_information{
+	width:260px;
+	line-height:10px;
+	margin-top:5px;
+	margin-left:2px;
+	float:left;
+}
+
+.checkout_sum{
+	line-height:10px;
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-right:80px;
+	float:right;
+}
+
+hr.checkout_color{
+	border-color:rgb(151,188,197);
+	border-width:1px;
+}
+
+.checkout_body{
+	margin-left:40px;
+	margin-right:40px;
+}
+
+.checkout_control{
+	margin-bottom:10px;
+}
