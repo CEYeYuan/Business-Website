@@ -17,17 +17,11 @@ import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
-public class edit extends HttpServlet{
+public class delete extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		PrintWriter out = resp.getWriter();
 		String orderid=req.getParameter("orderid");
-		String name = req.getParameter("ordername");
-		String phone = req.getParameter("phone");
-		String mail = req.getParameter("mail");
-		String email = req.getParameter("email");
-		String address = req.getParameter("address");
-		String status = req.getParameter("status");
-		String url="edit.jsp?orderid="+orderid;
+		String url="support.jsp";
 		
 
 		DatastoreService ds=DatastoreServiceFactory.getDatastoreService();
@@ -39,20 +33,6 @@ public class edit extends HttpServlet{
 		
 		for(Entity u1:pq.asIterable()){
 			
-			//u1.setProperty("orderid", orderid);
-			String user= u1.getProperty("user").toString();
-			
-			Entity e1=new Entity("order");
-			e1.setProperty("orderid", orderid);
-			e1.setUnindexedProperty("address", address);
-			e1.setProperty("name", name);
-			e1.setUnindexedProperty("email", email);
-			e1.setUnindexedProperty("phone", phone);
-			e1.setUnindexedProperty("status", status);
-			e1.setProperty("user", user);
-			e1.setProperty("mail", mail);
-			ds.put(e1);
-			
 			Key id = u1.getKey();
 			ds.delete(id);
 			
@@ -60,5 +40,8 @@ public class edit extends HttpServlet{
 		
 		out.print("<script>alert('Update successfully!');</script>");
     	out.print("<script>window.location.href='"+url+"'</script>");
+	}
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		doPost(req,resp);
 	}
 }

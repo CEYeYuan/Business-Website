@@ -77,7 +77,7 @@
 											</li>
 	
 											<li>
-												<a href='#' class='tooltip-error' data-rel='tooltip' title='Cancel' data-placement='left' onClick='delconfirm($info[orderid])'>
+												<a href='/delete?orderid=<% out.print(orderid + "'"); %> class='tooltip-error' data-rel='tooltip' title='Cancel' data-placement='left' onClick='delconfirm($info[orderid])'>
 													<span class='red'>
 														<i class='icon-trash'></i>
 													</span>
